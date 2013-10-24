@@ -13,3 +13,11 @@ results
 
 npm-debug.log
 node_modules
+
+.DS_Store
+*.swp
+*.swo
+
+testing
+test.js
+.idea
