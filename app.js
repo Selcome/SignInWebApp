@@ -4,8 +4,8 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
+  , mserver = require('./routes/manageserver')
+  , interface= require('./routes/interface')
   , http = require('http')
   , path = require('path');
 
@@ -13,8 +13,6 @@ var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 8999);
-app.set('views', __dirname + '/views');
-app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.bodyParser());
 app.use(express.methodOverride());
@@ -32,8 +30,12 @@ app.all('*', function(req, res, next) {
     next();
 });
 
-app.get('/', routes.index);
-app.get('/users', user.list);
+//界面层
+app.get('/', mserver.action);
+app.get('/v', mserver.action);
+
+////////接口层
+app.post('/p',interface.action);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
