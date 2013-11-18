@@ -1,4 +1,4 @@
-require('./Config');
+require('../config');
 var Db = require('mongodb').Db,
     Server = require('mongodb').Server;
 
