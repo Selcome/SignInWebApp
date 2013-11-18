@@ -20,7 +20,9 @@ exports.action = function(req, res){
 var sendData=function(res, data){
     res.send(data);
 }
+var picManager=require('../lib/PicManager.js');
 uploadPic=function(req, res){
-    console.log('file',req.files.pic.path);
-    sendData(res,{code:0});
+    picManager.action(req,function(data){
+        sendData(res,data);
+    });
 }
