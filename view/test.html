@@ -11,7 +11,14 @@
 
 <form method='post' action="p" enctype="multipart/form-data">
     <input name="command" value="uploadPic" type="hidden" />
-    <input name="name" type="text" id="name" />
+    <!--<input name="name" type="text" id="name"/>-->
+    <select name="name" id="name" >
+        <option value="王军">王军</option>
+        <option value="吴">吴</option>
+        <option value="云">云</option>
+        <option value="马">马</option>
+        <option value="曹">曹</option>
+    </select>
     <br />
     <input name="pic" type="file" id="pic" />
     <input type="submit" value="提 交" name="submit1" id="submit1">
