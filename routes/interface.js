@@ -26,3 +26,11 @@ uploadPic=function(req, res){
         sendData(res,data);
     });
 }
+
+//用户信息
+var userManager=require('../lib/UserManager.js');
+getUserList=function(req, res){
+    userManager.getUserList(req,function(data){
+        sendData(res,data);
+    });
+}

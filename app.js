@@ -6,19 +6,19 @@
 var express = require('express')
   , mserver = require('./routes/manageserver')
   , interface= require('./routes/interface')
-  , http = require('http')
-  , path = require('path');
+  , http = require('http');
 
 var app = express();
 
 // all environments
 app.set('port', process.env.PORT || 8999);
 app.use(express.favicon());
+app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
-app.use(express.compress());
-app.use(express.static(path.join(__dirname, 'public')));
+
+app.use("/public", express.static(__dirname+'/public'));
 
 //设置跨域访问
 app.all('*', function(req, res, next) {

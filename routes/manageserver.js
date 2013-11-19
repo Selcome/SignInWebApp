@@ -24,3 +24,8 @@ home=function(req, res){
 test=function(req,res){
     res.sendfile(path.join(__dirname, '../view/test.html'));
 }
+//得到图片流
+var picManager=require('../lib/PicManager.js');
+pic=function(req,res){
+    picManager.getPic(req,res);
+}
