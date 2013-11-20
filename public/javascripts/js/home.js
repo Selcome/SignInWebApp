@@ -19,9 +19,15 @@ $().ready(function() {
             console.log('response-->',response);
             var tr='';
             for(var i=0;i<response.length;i++){
-               tr=tr+'<tr><td>'+response[i].name+'</td>'+'<td>'+response[i].date.toLocaleString()+'</td>'+'<td>'+'<img style="width: 160px;height: 90px" src='+response[i].pic+' >'+'</td>'+'</tr>'
+               tr=tr+'<tr><td>'+response[i].name+'</td>'+'<td>'+response[i].date.toLocaleString()+'</td>'+'<td style="text-align: left">'+'<img style="width: 30%;height: auto" src='+response[i].pic+' >'+'</td>'+'</tr>'
             }
             $('#tab').append(tr);
+
+//            var str='';
+//            for(var i=0;i<response.length;i++){
+//                str=str+'<label>'+response[i].name+'</label>'+'<label>'+response[i].date.toLocaleString()+'</label>'+''+'<img style="width: 20%;height: auto" src='+response[i].pic+'>'+'<hr>'
+//            }
+//            $('#content').append(str)
         }
     });
 })

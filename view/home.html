@@ -1,17 +1,24 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="max-age=7200 "/>
+
     <title>签到后台</title>
 
     <script type="text/javascript" src="../public/javascripts/jquery-2.0.2.min.js"></script>
     <script type="text/javascript" src="../public/javascripts/js/home.js"></script>
     <link rel="stylesheet" type="text/css" href="../public/stylesheets/style.css"/>
+    <!--<style type="text/css">-->
+        <!--body{padding: 0}-->
+        <!--#content{width: 80%;margin-left: 10%;position: absolute;top: 210px;margin-right: 10%;}-->
+        <!--td{text-align: center}-->
+    <!--</style>-->
 </head>
 <body>
 <div id="top" style="background: cyan;width: 100%;height: 160px">
-<h1 style="float: inherit">欢迎来到签到后台</h1>
-<h2 style="float: right">今天是: <script type="text/javascript"> var myDate=new Date();function initArray(){
+<h1 style="text-align: center;" >欢迎来到签到后台</h1>
+<h2 style="float: right;margin-right: 50px">今天是: <script type="text/javascript"> var myDate=new Date();function initArray(){
     this.length=initArray.arguments.length
     for(var i=0;i<this.length;i++)
         this[i+1]=initArray.arguments[i]}
@@ -26,8 +33,9 @@
 document.write(myDate.toLocaleDateString());
 document.write(d[myDate.getDay()+1])</script></h2>
 </div>
-<div id="content" style="width: 80%;margin-left: 10%;position: absolute;top: 210px;margin-right: 10%;left: 10%" >
-     <table style="width: 80%" border="1 solid #888888" id="tab"> <tr><td style="width: 15%">姓名</td><td style="width: 25%">时间</td><td>相片</td></tr></table>
+
+<div id="content" >
+     <table  cellpadding="0" cellspacing="0" border="1px solid #888888" id="tab"> <tr><td style="width: 10%">姓名</td><td style="width: 20%">时间</td><td width="30%">相片</td></tr></table>
 
 </div>
 </body>
