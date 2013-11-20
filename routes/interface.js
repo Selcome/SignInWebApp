@@ -34,3 +34,10 @@ getUserList=function(req, res){
         sendData(res,data);
     });
 }
+
+datesearch=function(req,res){
+    userManager.datesearch(req,function(data){
+        sendData(res,data);
+
+    });
+}
