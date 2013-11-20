@@ -16,10 +16,10 @@ $().ready(function() {
         data:{command:'getUserList'},
         dataType : 'json',
         success:function(response){
-            console.log('response-->',response[0].date.toLocaleString());
+            console.log('response-->',response);
             var tr='';
             for(var i=0;i<response.length;i++){
-               tr=tr+'<tr><td>'+response[i].name+'</td>'+'<td>'+response[i].date.toLocaleString()+'</td>'+'<td>'+'<img style="width: 200px;height: 200px" src='+response[i].pic+' >'+'</td>'+'</tr>'
+               tr=tr+'<tr><td>'+response[i].name+'</td>'+'<td>'+response[i].date.toLocaleString()+'</td>'+'<td>'+'<img style="width: 160px;height: 90px" src='+response[i].pic+' >'+'</td>'+'</tr>'
             }
             $('#tab').append(tr);
         }
