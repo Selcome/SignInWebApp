@@ -24,6 +24,12 @@ $().ready(function() {
                tr=tr+'<tr><td>'+response[i].name+'</td>'+'<td>'+response[i].date.toLocaleString()+'</td>'+'<td>'+'<img style="width: 30%;height: auto" src='+response[i].pic+' >'+'</td>'+'</tr>'
             }
             $('#tab').append(tr);
+            $('#tab').show();
+            $('#hide').hide();
+            }else{
+            $('#tab').hide();
+             $('#hide').text(myDate.toLocaleString()+'还没有人签到!');
+             $('#hide').show();
             }
 
         }
@@ -60,7 +66,7 @@ function HS_calender(){
     var lis = "";
     var style = "";
     style +="<style type='text/css'>";
-    style +=".calender { width:170px; height:auto; font-size:12px; margin-right:14px; no-repeat right center #fff; border:1px solid #397EAE;}";
+    style +=".calender { position:absolute;width:170px; height:auto; font-size:12px;background:url{../image/cal.gif} margin-right:14px; no-repeat right center #fff; border:1px solid #397EAE;left:-170px;top:25px}";
     style +=".calender ul {list-style-type:none; margin:0; padding:0;}";
     style +=".calender .day { background-color:#EDF5FF; height:20px;}";
     style +=".calender .day li,.calender .date li{ float:left; width:14%; height:20px; line-height:20px; text-align:center}";
@@ -148,12 +154,20 @@ function _selectThisDay(d){
         data:{command:'datesearch',value:start},
         dataType : 'json',
         success:function(response){
-            $('#tab').empty()
+            $('#tab').empty();
+            if(response.length==0){
+                $('#tab').hide();
+                $('#hide').text(date+'没有人签到');
+                $('#hide').show();
+            }else{
+                $('#tab').show();
+                $('#hide').hide();
             var tr=' <tr><td style="width: 10%">姓名</td><td style="width: 20%">时间</td><td width="30%">相片</td></tr>';
             for(var i=0;i<response.length;i++){
                 tr=tr+'<tr><td>'+response[i].name+'</td>'+'<td>'+response[i].date.toLocaleString()+'</td>'+'<td>'+'<img style="width: 30%;height: auto" src='+response[i].pic+' >'+'</td>'+'</tr>'
             }
             $('#tab').append(tr);
+            }
     }
     });
 }
