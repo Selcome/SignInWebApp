@@ -19,10 +19,12 @@ $().ready(function() {
         success:function(response){
             console.log('response-->',response);
             var tr='';
+            if(response.length>0){
             for(var i=0;i<response.length;i++){
                tr=tr+'<tr><td>'+response[i].name+'</td>'+'<td>'+response[i].date.toLocaleString()+'</td>'+'<td>'+'<img style="width: 30%;height: auto" src='+response[i].pic+' >'+'</td>'+'</tr>'
             }
             $('#tab').append(tr);
+            }
 
         }
     });
@@ -58,7 +60,7 @@ function HS_calender(){
     var lis = "";
     var style = "";
     style +="<style type='text/css'>";
-    style +=".calender { width:170px; height:auto; font-size:12px; margin-right:14px; background:url(calenderbg.gif) no-repeat right center #fff; border:1px solid #397EAE; padding:1px}";
+    style +=".calender { width:170px; height:auto; font-size:12px; margin-right:14px; no-repeat right center #fff; border:1px solid #397EAE;}";
     style +=".calender ul {list-style-type:none; margin:0; padding:0;}";
     style +=".calender .day { background-color:#EDF5FF; height:20px;}";
     style +=".calender .day li,.calender .date li{ float:left; width:14%; height:20px; line-height:20px; text-align:center}";
@@ -147,7 +149,7 @@ function _selectThisDay(d){
         dataType : 'json',
         success:function(response){
             $('#tab').empty()
-            var tr=' <tr><td style="width: 10%">姓名</td><td style="width: 20%">时间</td><td width="30%">相片</td><td><input type="text" onclick="HS_setDate(this)" value='+date+'></td></tr>';
+            var tr=' <tr><td style="width: 10%">姓名</td><td style="width: 20%">时间</td><td width="30%">相片</td></tr>';
             for(var i=0;i<response.length;i++){
                 tr=tr+'<tr><td>'+response[i].name+'</td>'+'<td>'+response[i].date.toLocaleString()+'</td>'+'<td>'+'<img style="width: 30%;height: auto" src='+response[i].pic+' >'+'</td>'+'</tr>'
             }
