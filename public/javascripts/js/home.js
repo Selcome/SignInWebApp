@@ -25,8 +25,15 @@ function showImage(response, date) {
     $('#image').empty();
     if (response.length > 0) {
         for (var i = 0; i < response.length; i++) {
-            initView(response[i].pic, response[i].name, response[i].date, response.length);
+            initView(response[i].ueserqian.pic, response[i].name, response[i].ueserqian.date, 0);
+
         }
+        for (var i = 0; i < response.length; i++) {
+            if (response[i].usertui) {
+                initView(response[i].usertui.pic, response[i].name, response[i].usertui.date.Format("yyyy-MM-dd hh:mm:ss"), 1);
+            }
+        }
+
         $('#image').show();
         $('#hide').hide();
     } else {
@@ -35,8 +42,13 @@ function showImage(response, date) {
         $('#hide').show();
     }
 }
-
 function initView(url, name, date, index) {
+    var text = ''
+    if (index == 0) {
+        text = '签到';
+    } else {
+        text = '签退';
+    }
     var d = document.createElement("div");
     d.className = 'd';
     var d1 = '<div class="d1">';
@@ -46,11 +58,10 @@ function initView(url, name, date, index) {
         '<div class="d5"><p>' + '  时间：' + date + '</p></div>' +
         '</div>'
     var d3 = '<div class="d3">' +
-        '右上角图片' + '</div>'
+        text + '</div>'
     d1 = d1 + img + d2 + d3;
     d.innerHTML = d1 + '</div>';
     $('#image').append(d);
 }
-
 
 
