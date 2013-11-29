@@ -1,0 +1,53 @@
+.d  {
+    width: 100%;
+    height: auto;;
+    position: relative;
+}
+.d1 {
+    position: relative;
+    margin-bottom: 50px;
+    width: 20%;
+    height: auto;
+    float: left;
+}
+
+.d1 img {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.d1 .d2 {
+    position: absolute;
+    bottom: 0px;
+    width: 80%;
+    height: 80px;
+    left: 10%;
+    background-color: transparent;
+    margin: auto;
+}
+
+.d1 .d3 {
+    position: absolute;
+    right: 10%;
+    margin: auto;
+    width: 20%;
+    height: auto;
+    top: 0px;
+    background-color: transparent;
+    padding-left: 10px;
+}
+
+.d1 .d2 .d4 {
+    clear: both;
+
+}
+
+.d1 .d2 .d5 {
+    clear: both;
+
+}
+.d2 p{
+    margin-left: 10px;
+}
