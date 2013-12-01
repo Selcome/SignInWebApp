@@ -13,6 +13,18 @@ a {
 #top {
     width: 100%;
     margin: 0 auto;
+    background: cyan;
+    height: 120px
+}
+
+#top h1 {
+    text-align: center;
+    padding-top: 20px
+}
+
+#top h2 {
+    float: right;
+    margin-right: 50px
 }
 
 table {

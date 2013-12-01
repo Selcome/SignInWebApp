@@ -1,8 +1,9 @@
-.d  {
+.d {
     width: 100%;
     height: auto;;
     position: relative;
 }
+
 .d1 {
     position: relative;
     margin-bottom: 50px;
@@ -20,12 +21,16 @@
 
 .d1 .d2 {
     position: absolute;
+    color: #fffff0;
     bottom: 0px;
     width: 80%;
     height: 80px;
     left: 10%;
-    background-color: transparent;
+    background-color: #000;
     margin: auto;
+    filter: alpha(Opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4
 }
 
 .d1 .d3 {
@@ -48,6 +53,8 @@
     clear: both;
 
 }
-.d2 p{
+
+.d2 p {
     margin-left: 10px;
 }
+
