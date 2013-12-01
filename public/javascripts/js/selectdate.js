@@ -5,6 +5,7 @@
  * Time: 下午2:09
  * To change this template use File | Settings | File Templates.
  */
+
 function HS_DateAdd(interval, number, date) {
     number = parseInt(number);
     if (typeof(date) == "string") {
@@ -58,7 +59,7 @@ function HS_calender() {
 //    var style="<link rel='stylesheet' type='text/css' href='../../stylesheets/selectdatestyle.css'>"
     var style = "";
     style += "<style type='text/css'>";
-    style += ".calender { position:absolute;width:170px; height:auto; font-size:12px;background:#FFFFFF; margin-right:14px; no-repeat right center #fff; border:1px solid #397EAE;left:-170px;top:25px}";
+    style += ".calender { position:relative;width:170px; height:auto; font-size:12px;background:#FFFFFF no-repeat right center; margin-right:14px; border:1px solid #397EAE;left:-170px;top:25px;z-index:1000;}";
     style += ".calender ul {list-style-type:none; margin:0; padding:0;}";
     style += ".calender .day { background-color:#EDF5FF; height:20px;}";
     style += ".calender .day li,.calender .date li{ float:left; width:14%; height:20px; line-height:20px; text-align:center}";

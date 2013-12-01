@@ -30,7 +30,7 @@ function showImage(response, date) {
         }
         for (var i = 0; i < response.length; i++) {
             if (response[i].usertui) {
-                initView(response[i].usertui.pic, response[i].name, response[i].usertui.date.Format("yyyy-MM-dd hh:mm:ss"), 1);
+                initView(response[i].usertui.pic, response[i].name, response[i].usertui.date, 1);
             }
         }
 

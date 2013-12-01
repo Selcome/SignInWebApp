@@ -29,7 +29,7 @@ table {
 #image {
     width: auto;
     position: static;
-    margin-top: 210px;
+    margin-top: 90px;
 }
 
 td {
@@ -41,6 +41,8 @@ td {
     position: absolute;
     right: 3%;
     top: 10px;
+    height: auto;
+    width: auto;
 }
 
 #hide {
