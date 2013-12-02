@@ -52,7 +52,7 @@ function initView(url, name, date, index) {
     var d = document.createElement("div");
     d.className = 'd';
     var d1 = '<div class="d1">';
-    var img = '<img onerror="this.onerror=null;this.src="\../../public//image/test.png\" src=' + url + '>'
+    var img = '<img onload="this.onload=null;this.src="\../../public//image/test.png\" src=' + url + '>'
     var d2 = '<div class="d2">' +
         '<div class="d4"><p>' + '  姓名：' + name + '</p></div>' +
         '<div class="d5"><p>' + '  时间：' + date + '</p></div>' +
