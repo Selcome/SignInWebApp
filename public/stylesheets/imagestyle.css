@@ -17,6 +17,7 @@
     height: auto;
     margin-left: 10%;
     margin-right: 10%;
+    background: url("../../public/image/test.png");
 }
 
 .d1 .d2 {
