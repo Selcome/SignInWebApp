@@ -1,55 +1,64 @@
-.d {
+.outer {
     width: 100%;
-    height: auto;;
+    height: auto;
     position: relative;
 }
 
-.d1 {
+.outer .outer_content {
     position: relative;
-    margin-bottom: 50px;
-    width: 20%;
+    width: 227px;
     height: 404px;
     float: left;
+    margin: 0 28px 50px 28px;
 }
 
-.d1 img {
-    width: 80%;
-    height: auto;
-    margin-left: 10%;
-    margin-right: 10%;
+.outer .outer_content img {
+    width: 100%;
+    height: 100%;
+    background-size:contain;
+    box-shadow: rgba(134, 66, 189, 0.14) 7px 6px 3px 0px;
+    /* Gecko browsers */
+    -moz-border-radius: 5px;
+    /* Webkit browsers */
+    -webkit-border-radius: 5px;
+    /* W3C syntax - likely to be standard so use for future proofing */
+    border-radius: 10px;
 }
 
-.d1 .d2 {
+.outer .outer_content .info {
     position: absolute;
     color: #fffff0;
     bottom: 0px;
-    width: 80%;
+    width: 100%;
     height: 80px;
-    left: 10%;
+    left: 0;
     background-color: #000;
     margin: auto;
     filter: alpha(Opacity=40);
     -moz-opacity: 0.4;
-    opacity: 0.4
+    opacity: 0.4;
+    /* W3C syntax - likely to be standard so use for future proofing */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
-.d1 .d3 {
+.outer .outer_content .qiandaoinfo {
     position: absolute;
     right: 10%;
     margin: auto;
     width: 20%;
     height: auto;
-    top: 0px;
+    top: 20px;
     background-color: transparent;
     padding-left: 10px;
 }
 
-.d1 .d2 .d4 {
+.outer .outer_content .info .name {
     clear: both;
 
 }
 
-.d1 .d2 .d5 {
+.outer .outer_content .info .date {
     clear: both;
 
 }

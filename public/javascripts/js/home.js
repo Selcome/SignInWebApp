@@ -24,10 +24,14 @@ $().ready(function () {
         {
             selector: '.scrollLoading',
             callback: function (elm) {
+                console.log('here')
                 $(elm).slideDown();
             }
         }
     );
+//    jQuery(document).ready(function() {
+//        jQuery("img.lazy").lazy();
+//    });
 })
 function showImage(response, date) {
     $('#image').empty();
@@ -59,14 +63,14 @@ function initView(url, name, date, index) {
         text = '签退';
     }
     var d = document.createElement("div");
-    d.className = 'd';
-    var d1 = '<div class="d1">';
-    var img = '<img src='+url+' class="scrollLoading">'
-    var d2 = '<div class="d2">' +
-        '<div class="d4"><p>' + '  姓名：' + name + '</p></div>' +
-        '<div class="d5"><p>' + '  时间：' + date + '</p></div>' +
+    d.className = 'outer';
+    var d1 = '<div class="outer_content">';
+    var img = '<img class="lazy" src='+url+' class="scrollLoading">'
+    var d2 = '<div class="info">' +
+        '<div class="name"><p>' + '  姓名：' + name + '</p></div>' +
+        '<div class="date"><p>' + '  时间：' + date + '</p></div>' +
         '</div>'
-    var d3 = '<div class="d3">' +
+    var d3 = '<div class="qiandaoinfo">' +
         text + '</div>'
     d1 = d1 + img + d2 + d3;
     d.innerHTML = d1 + '</div>';
