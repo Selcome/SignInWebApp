@@ -43,6 +43,7 @@ function showImage(response, date) {
     }
 }
 function initView(url, name, date, index) {
+    var olurl='../../public/image/test.png'
     var text = ''
     if (index == 0) {
         text = '签到';
@@ -52,7 +53,7 @@ function initView(url, name, date, index) {
     var d = document.createElement("div");
     d.className = 'd';
     var d1 = '<div class="d1">';
-    var img = '<img onload="this.src="\../../public/image/test.png\" src=' + url + '>'
+    var img = '<img onload="this.src='+olurl+'" src='+url+'>'
     var d2 = '<div class="d2">' +
         '<div class="d4"><p>' + '  姓名：' + name + '</p></div>' +
         '<div class="d5"><p>' + '  时间：' + date + '</p></div>' +

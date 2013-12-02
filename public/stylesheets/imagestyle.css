@@ -8,7 +8,7 @@
     position: relative;
     margin-bottom: 50px;
     width: 20%;
-    height: 403px;
+    height: auto;
     float: left;
 }
 
@@ -17,6 +17,7 @@
     height: auto;
     margin-left: 10%;
     margin-right: 10%;
+    background: url("../../public/image/test.png");
 }
 
 .d1 .d2 {
