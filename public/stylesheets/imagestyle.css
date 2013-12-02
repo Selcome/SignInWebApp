@@ -55,11 +55,12 @@
 
 .outer .outer_content .info .name {
     clear: both;
-
+    margin-left: 5%;
 }
 
 .outer .outer_content .info .date {
     clear: both;
+    margin-left: 5%;
 
 }
 
