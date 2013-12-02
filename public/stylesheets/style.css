@@ -24,7 +24,8 @@ a {
 
 #top h2 {
     float: right;
-    margin-right: 50px
+    margin-right: 50px;
+    margin-top: 70px;
 }
 
 table {
