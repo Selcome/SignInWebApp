@@ -20,6 +20,14 @@ $().ready(function () {
             showImage(response, todayObj);
         }
     });
+    $('.d').imageloader(
+        {
+            selector: '.scrollLoading',
+            callback: function (elm) {
+                $(elm).slideDown();
+            }
+        }
+    );
 })
 function showImage(response, date) {
     $('#image').empty();
@@ -43,7 +51,7 @@ function showImage(response, date) {
     }
 }
 function initView(url, name, date, index) {
-    var olurl='../../public/image/test.png'
+    var onurl='../../public/image/test.png'
     var text = ''
     if (index == 0) {
         text = '签到';
@@ -53,7 +61,7 @@ function initView(url, name, date, index) {
     var d = document.createElement("div");
     d.className = 'd';
     var d1 = '<div class="d1">';
-    var img = '<img onload="this.src='+olurl+'" src='+url+'>'
+    var img = '<img src='+url+' class="scrollLoading">'
     var d2 = '<div class="d2">' +
         '<div class="d4"><p>' + '  姓名：' + name + '</p></div>' +
         '<div class="d5"><p>' + '  时间：' + date + '</p></div>' +
@@ -64,5 +72,6 @@ function initView(url, name, date, index) {
     d.innerHTML = d1 + '</div>';
     $('#image').append(d);
 }
+
 
 
